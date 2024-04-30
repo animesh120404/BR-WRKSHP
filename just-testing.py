@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_python_script:
-    name: Run hello.py
+    name: just-testingcode.py
     runs-on: ubuntu-latest
     
 
