@@ -1,0 +1,39 @@
+name: Python Script Workflow 
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run_python_script:
+    name: Run pin.py
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Run pin.py
+      run: python pin.py
+  run_python_script_2:
+    needs: run_python_script
+    name: Run Babies.py 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12' # Use the Python version you need
+
+    - name: Run just-testing.py 
+      run: python just-testing.py 
