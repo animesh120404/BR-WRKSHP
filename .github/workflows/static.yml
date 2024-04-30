@@ -1,29 +1,14 @@
-name: Python Script Workflow 
 
-on: 
+name: Python Script Workflow
+
+on:
   push:
     branches:
       - main
 
 jobs:
   run_python_script:
-    name: Run sip.py
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.12'
-
-    - name: Run sip.py
-      run: python sip.py
-  run_python_script_2:
-    needs: run_python_script
-    name: Run pin.py
+    name: Run hello.py
     runs-on: ubuntu-latest
 
     steps:
@@ -35,5 +20,8 @@ jobs:
       with:
         python-version: '3.12' # Use the Python version you need
 
-    - name: Run pin.py
-      run: python pin.py
+    - name: Install dependencies
+      run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+    - name: Run justtestingcode.py
+      run: python justtestingcode.py
