@@ -23,7 +23,7 @@ jobs:
       run: python pin.py
   run_python_script_2:
     needs: run_python_script
-    name: Run Babies.py 
+    name: Run just-testing.py 
     runs-on: ubuntu-latest
 
     steps:
