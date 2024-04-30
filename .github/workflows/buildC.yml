@@ -16,7 +16,7 @@ jobs:
       
     - name: Compile C program for Windows
       run: |
-        x86_64-w64-mingw32-gcc hello.C -o hello.exe
+        x86_64-w64-mingw32-gcc hello.c -o hello.exe
         ls -lh  # List file details for debugging
       
     - name: Commit changes
