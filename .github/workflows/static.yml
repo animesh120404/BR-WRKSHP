@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_python_script:
-    name: Run just-testingcode.py
+    name: Run just-testing.py
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +19,8 @@ jobs:
       with:
         python-version: '3.12' # Use the Python version you need
 
-    - name: Run just-testingcode.py
-      run: python just-testingcode.py
+    - name: Run just-testing.py
+      run: python just-testing.py
   run_python_script_2:
     needs: run_python_script
     name: Run hello.py 2
@@ -35,5 +35,5 @@ jobs:
       with:
         python-version: '3.12' # Use the Python version you need
 
-    - name: Run just-testingcode.py 2
-      run: python just-testingcode.py
+    - name: Run just-testing.py 2
+      run: python just-testing.py
